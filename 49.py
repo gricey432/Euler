@@ -1,4 +1,4 @@
-from euler_common import generate_primes, digits
+from euler_common import generate_primes
 from itertools import permutations, combinations
 
 
@@ -16,8 +16,8 @@ def main(p):
     # Iterate through and look for permutations
     for prime in p:
         n = [
-            int(''.join(map(str, permutation)))
-            for permutation in permutations(digits(prime))
+            int(''.join(permutation))
+            for permutation in permutations(str(prime))
         ]
         if len(n) >= 3:
             for comb in combinations(n, 3):  # don't really need all combinations, but it's quick enough anyway
