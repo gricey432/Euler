@@ -30,3 +30,12 @@ def generate_squares():
     while True:
         yield n ** 2
         n += 1
+
+
+def digits(n):
+    d = []
+    n = abs(n)
+    while n >= 1:
+        d.append(n % 10)
+        n //= 10
+    return d

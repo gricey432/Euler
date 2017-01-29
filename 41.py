@@ -1,15 +1,6 @@
 from math import log10
 from itertools import permutations
-from euler_common import is_prime
-
-
-def digits(n):
-    d = []
-    n = abs(n)
-    while n >= 1:
-        d.append(n % 10)
-        n //= 10
-    return d
+from euler_common import is_prime, digits
 
 
 def digit_length(n):
