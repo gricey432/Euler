@@ -1,15 +1,7 @@
-from math import sqrt
+from euler_common import is_prime
 
-def is_prime(test):
-    j = 2
-    root = sqrt(test)
-    while j <= root:
-        if test % j == 0:
-            return False
-        j += 1
-    return True
 
-n = 1 # Starts at 2, 1 aded in loop
+n = 1  # Starts at 2, 1 added in loop
 n_prime = 1
 
 while n_prime <= 10001:

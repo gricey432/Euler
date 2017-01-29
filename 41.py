@@ -1,5 +1,6 @@
-from math import log10, ceil, sqrt
+from math import log10
 from itertools import permutations
+from euler_common import is_prime
 
 
 def digits(n):
@@ -23,16 +24,6 @@ def is_pandigital(n):
     for m in range(digit_length(n)):
         if m+1 not in d:
             return False
-    return True
-
-
-def is_prime(n):
-    j = 2
-    root = int(ceil(sqrt(n)))
-    while j <= root:
-        if n % j == 0:
-            return False
-        j += 1
     return True
 
 

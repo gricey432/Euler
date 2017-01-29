@@ -1,13 +1,4 @@
-from math import sqrt
-
-def is_prime(test):
-    j = 2
-    root = sqrt(test)
-    while j <= root:
-        if test % j == 0:
-            return False
-        j += 1
-    return True
+from euler_common import is_prime
 
 best_l = best_p = 0
 

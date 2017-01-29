@@ -1,15 +1,6 @@
 from math import sqrt
+from euler_common import is_prime
 
-def is_prime(test):
-    if test < 2:
-        return False
-    j = 2
-    root = sqrt(test)
-    while j <= root:
-        if test % j == 0:
-            return False
-        j += 1
-    return True
 
 def prime_cut_left(n):
     if n < 10:
@@ -18,6 +9,7 @@ def prime_cut_left(n):
     if is_prime(cut):
         return prime_cut_left(cut)
     return False
+
 
 def prime_cut_right(n):
     if n < 10:

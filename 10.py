@@ -1,21 +1,12 @@
-from math import sqrt, ceil
+from euler_common import is_prime
 
-def is_prime(test):
-    j = 2
-    root = int(ceil(sqrt(test)))
-    while j <= root:
-        if test % j == 0:
-            return False
-        j += 1
-    return True
-
-sum = 0
+total = 0
 
 i = 3
 while i < 2000000:
     if is_prime(i):
-        sum += i
+        total += i
     i += 2
 
 # Add 2, 2 is the only even prime
-print sum + 2
+print total + 2
