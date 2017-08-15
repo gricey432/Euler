@@ -39,3 +39,14 @@ def digits(n):
         d.append(n % 10)
         n //= 10
     return d
+
+
+def is_palindrome(n):
+    s = str(n)
+    tens = len(s) - 1
+    i = 0
+    while i <= tens / 2:
+        if not s[i] == s[tens - i]:
+            return False
+        i += 1
+    return True
